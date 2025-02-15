@@ -255,45 +255,52 @@ h1{
 	white-space: pre-line;
 }
 .chats-container {
-    display: flex; /* Enable flexbox on the container */
-    justify-content: flex-end; /* Align items to the right */
-    margin-bottom: 10px; /* Optional: add some space between messages */
+    display: flex; 
+    justify-content: flex-end; 
+    margin-bottom: 10px;
     width: 100%;
 	position: relative;
 	left: 10%;
 	gap: 20px;
 	flex-direction: column;
 
-	 /* Ensure the container takes full width */
+	 
 }
 
+
+.message-user-message, 
+.message-bot-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 75%;
+}
 
 .message-user-message {
-     /* Green background for user messages */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Rounded corners */
-    max-width: 100%; /* Limit the width of the message */
-    color: white; /* Text color */
-    align-self: flex-end; 
-	position: relative;
-	left: 50%;
-	/* Align this item to the end of the container */
+    justify-content: flex-end; 
 }
-.chats-container .message-bot-message .avatar{
-	height: 43px;
-	width: 43px;
-	flex-shrink: 0;
-	padding: 6px;
-	align-self: flex-start;
-	margin-right: -7px;
-	border-radius: 50%;
-	background: #283045;
-	border: 1px solid #333e58
+
+.message-bot-message {
+    justify-content: flex-start; 
 }
-.chats-container .message-bot-message .avatar img {
-    height:5px;
-	width: 5px;
+
+.avatar {
+    height: 55px;  
+    width: 55px;  
+    border-radius: 50%;
+    object-fit: cover;  
+    background: #283045;
+    border: 1px solid #333e58;
 }
+
+
+.message-text {
+    padding: 12px 16px;
+    border-radius: 13px;
+    background: #283045;
+    color: white;
+}
+
 
 
 
